@@ -25,12 +25,12 @@ Requirements:
     </div>
     <div class="row">
       <select name="colors" id="colors" onchange="changeBackgroundColor()">
-        <option value ="default">Make a selection...</option>
-        <option value="blue">Blue</option>
-        <option value="dk-green">Dark green</option>
-        <option value="yellow">Yellow</option>
-        <option value="lt-green">Light green</option>
-        <option value="pink">Pink</option>
+        <option value="white">Make a selection...</option>
+        <option value="#007BA7">Blue</option>
+        <option value="#124429">Dark green</option>
+        <option value="#E0D268">Yellow</option>
+        <option value="#91AC9A">Light green</option>
+        <option value="#E7DADA">Pink</option>
       </select>
     </div>
   </div>
@@ -40,24 +40,7 @@ Requirements:
 
     function changeBackgroundColor() {
       let color = document.getElementById("colors").value;
-      if (color === "blue") {
-        document.body.style.backgroundColor = "#007BA7";
-      }
-      if (color === "dk-green") {
-        document.body.style.backgroundColor = "#124429";
-      }
-      if (color === "yellow") {
-        document.body.style.backgroundColor = "#E0D268";
-      }
-      if (color === "lt-green") {
-        document.body.style.backgroundColor = "#91AC9A";
-      }
-      if (color === "pink") {
-        document.body.style.backgroundColor = "#E7DADA";
-      }
-      if (color === "default") {
-        document.body.style.removeProperty("background-color");
-      }
+      document.body.style.backgroundColor = color;
     }
   </script>
 </body>
